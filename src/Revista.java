@@ -13,4 +13,10 @@ public class Revista extends itemBiblioteca {
     public double multaPorDia() {
         return 1.00;
     };
+
+    @Override
+    public String getTipo() {
+        return "Revista";
+    };
+
 };

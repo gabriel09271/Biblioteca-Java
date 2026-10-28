@@ -14,4 +14,8 @@ public class Livro extends itemBiblioteca {
         return 0.50;
     }
 
-}
+    @Override
+    public String getTipo() {
+        return "Livro";
+    };
+};

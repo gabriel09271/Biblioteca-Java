@@ -11,6 +11,7 @@ public abstract class itemBiblioteca {
 
     public abstract int prazoEmprestimo();
     public abstract double multaPorDia();
+    public abstract String getTipo();
 
     public int getCodigo() {
         return codigo;
@@ -35,6 +36,7 @@ public abstract class itemBiblioteca {
     public void exibirDados() {
         System.out.println(
                 "Código: " + codigo
+                        + "| Tipo: "  + getTipo()
                         + " | Título: " + titulo
                         + " | Disponível: " + disponivel
                         + " | Prazo: " + prazoEmprestimo() + " dias"

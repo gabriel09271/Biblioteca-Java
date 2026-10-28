@@ -7,12 +7,14 @@ public class Main {
         Livro livro2 = new Livro(3, "1984");
         Revista revista = new Revista(4, "Ciência Hoje");
         Revista revista1 = new Revista(5, "O Clarim Diário");
+        Dvd dvd = new Dvd(6, "Michael Jackson");
 
         biblioteca.cadastrarItem(livro);
         biblioteca.cadastrarItem(livro1);
         biblioteca.cadastrarItem(livro2);
         biblioteca.cadastrarItem(revista);
         biblioteca.cadastrarItem(revista1);
+        biblioteca.cadastrarItem(dvd);
 
         Aluno aluno = new Aluno("Gabriel", "gabriel123@gmail.com", "124");
         Professor professor = new Professor("Jefferson", "jefferson@gmail.com", "146");
@@ -36,5 +38,11 @@ public class Main {
 
 //         testando o marcarEmprestado
         biblioteca.emprestar(4, "Jefferson");
+
+//        inserindo a categoria DVD
+
+        biblioteca.emprestar(6, "Jefferson");
+        biblioteca.listarAcervo();
+
     };
 };
