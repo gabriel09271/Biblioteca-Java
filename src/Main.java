@@ -1,15 +1,40 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
-    }
-}
+    public static void main(String[] args) {
+        Biblioteca biblioteca = new Biblioteca(10, 10);
+        Livro livro = new Livro(1, "O Hobbit,");
+        Livro livro1 = new Livro(2, "O Senhor dos Anéis: A Sociedade do Anel");
+        Livro livro2 = new Livro(3, "1984");
+        Revista revista = new Revista(4, "Ciência Hoje");
+        Revista revista1 = new Revista(5, "O Clarim Diário");
+
+        biblioteca.cadastrarItem(livro);
+        biblioteca.cadastrarItem(livro1);
+        biblioteca.cadastrarItem(livro2);
+        biblioteca.cadastrarItem(revista);
+        biblioteca.cadastrarItem(revista1);
+
+        Aluno aluno = new Aluno("Gabriel", "gabriel123@gmail.com", "124");
+        Professor professor = new Professor("Jefferson", "jefferson@gmail.com", "146");
+
+        biblioteca.cadastrarUsuario(aluno);
+        biblioteca.cadastrarUsuario(professor);
+
+        biblioteca.emprestar(1, "Gabriel");
+        biblioteca.emprestar(2, "Gabriel");
+        biblioteca.emprestar(3, "Gabriel");
+        biblioteca.emprestar(4, "Gabriel");
+
+        biblioteca.listarAcervo();
+
+        biblioteca.devolver(3, "Gabriel");
+
+        biblioteca.emprestar(4, "Gabriel");
+
+        biblioteca.emprestar(3, "Jefferson");
+        biblioteca.emprestar(5, "Jefferson");
+
+//         testando o marcarEmprestado
+        biblioteca.emprestar(4, "Jefferson");
+    };
+};
